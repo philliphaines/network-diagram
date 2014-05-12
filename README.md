@@ -12,7 +12,7 @@ export AWS_DEFAULT_REGION=us-east-1; aws ec2 describe-instances > instances.json
 
 Copy the `.json` files into the `data` directory.
 
-To view the diagram run the simple Python web server and open http://localhost:8000/
+To view the diagram run the simple Python web server and open [http://localhost:8000/](http://localhost:8000/)
 in your browser.
 
 ```
