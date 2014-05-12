@@ -101,16 +101,15 @@ Diagram = {
       return moment(isoDateTime).fromNow();
     })
 
+    var groupTemplate = Diagram.templates["group.html"];
     _.each(Diagram.data.groups, function(group) {
       group.Instances = Diagram.findInstancesForGroup(group);
-
-      var html = Diagram.templates["group.html"](group);
-      $("#groups").append(html);
+      $("#groups").append(groupTemplate(group));
     })
 
+    var instanceTemplate = Diagram.templates["instance.html"];
     _.each(Diagram.data.instances, function(instance) {
-      var html = Diagram.templates["instance.html"](instance);
-      $("#instances").append(html);
+      $("#instances").append(instanceTemplate(instance));
     })
   }
 };
