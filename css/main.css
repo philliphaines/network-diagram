@@ -29,7 +29,7 @@ ul.firewall span.ips, span.groups { font-size: 70%; color: grey; }
 
 
 ul.csv { display: inline; list-style: none; -webkit-padding-start: 0px; }
-ul.csv li { display: inline; }
+ul.csv li { display: inline; white-space: nowrap; }
 ul.csv li:after { content: ", "; }
 ul.csv li:last-child:after { content: ""; }
 ul.csv li:nth-last-child(2):after { content: " and "; }
