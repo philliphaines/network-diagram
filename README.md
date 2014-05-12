@@ -1,5 +1,15 @@
 # Simple AWS Network Diagram Generator
 
+Produce a simple network diagram showing the ports accesible on an AWS regions
+security groups. From there drill down to each of the instances running
+inside the security group.
+
+| Colour | Meaning                                           |
+| ------ | ------------------------------------------------- |
+| Red    | Firewall open to any IP address                   |
+| Orange | Firewall open to a restricted set of IP addresses |
+| Green  | Open only to other security groups                |
+
 ## How to use
 
 Clone the repo then run the following commands using the AWS command line
