@@ -1,0 +1,44 @@
+<div class="instance" id="{{{InstanceId}}}">
+  <h3>{{{InstanceId}}}</h3>
+  <ul>
+    <li>{{{InstanceType}}} with {{{RootDeviceType}}}</li>
+    <li>{{timeAgo LaunchTime}}</li>
+    <li>Public IP {{{PublicIpAddress}}}</li>
+    <li>Private IP {{{PrivateIpAddress}}}</li>
+    <li>Key {{{KeyName}}}</li>
+    {{#if EbsOptimized}}
+      <li>EBS Optimized</li>
+    {{/if}}
+  </ul>
+
+  <div class="security-groups">
+    <h4>Security Groups</h4>
+    <ul>
+      {{#each SecurityGroups}}
+        <li><a href="#{{{GroupId}}}">{{{GroupName}}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="block-devices">
+    <h4>Block Devices</h4>
+    <ul>
+      {{#each BlockDeviceMappings}}
+        <li>
+          {{{DeviceName}}}
+          {{#with Ebs}}
+            {{{VolumeId}}}
+          {{/with}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="tags">
+    <ul class="tags">
+    {{#each Tags}}
+      <li>{{{Key}}}: {{{Value}}}</li>
+    {{/each}}
+    </ul>
+  </div>
+</div>
